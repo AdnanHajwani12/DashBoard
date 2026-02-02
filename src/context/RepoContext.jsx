@@ -7,7 +7,7 @@ const initialState = {
   selectedRepo: null,
   loading: false,
   error: null,
-  cache: {}, // query -> repos
+  cache: {}, 
 };
 
 function repoReducer(state, action) {

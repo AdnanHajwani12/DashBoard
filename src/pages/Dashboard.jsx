@@ -14,7 +14,7 @@ export default function Dashboard() {
   useEffect(() => {
     if (!debouncedQuery.trim()) return;
 
-    // 🔥 CACHE HIT
+   
     if (state.cache[debouncedQuery]) {
       dispatch({
         type: "CACHE_HIT",
@@ -115,10 +115,10 @@ export default function Dashboard() {
   </button>
 </div>
 
-      {/* 🔥 METRICS BAR (THIS WAS MISSING) */}
+     
       <MetricsBar />
 
-      {/* Search */}
+    
       <div className="flex gap-2 mb-8">
         <input
           type="text"
@@ -129,7 +129,6 @@ export default function Dashboard() {
         />
       </div>
 
-      {/* States */}
       {state.loading && <p>Loading repositories...</p>}
 
       {state.error && (
@@ -142,7 +141,7 @@ export default function Dashboard() {
         <p className="text-slate-500">Search to begin analysis</p>
       )}
 
-      {/* Repo Grid */}
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {sortedRepos.map((repo) => (
           <div
@@ -168,7 +167,7 @@ export default function Dashboard() {
         ))}
       </div>
 
-      {/* Repo Details Side Panel */}
+     
       <RepoDetails />
     </div>
   );
